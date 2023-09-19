@@ -113,7 +113,7 @@ class SQLPlugin(StoragePluginBase):
         # Create a table with the given namespace
         table = Table(namespace, self._metadata,
                       Column('key', String(190), primary_key=True),
-                      Column('value', String(16383)),
+                      Column('value', String),
                       extend_existing=True)
 
         class NewKV(KV):
